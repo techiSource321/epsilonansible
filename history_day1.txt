@@ -1,0 +1,89 @@
+1179  ansible  hello  -m  command  -a  "date"
+ 1180  ansible  hello  -m  command  -a  "date"  -k
+ 1181  sshpass
+ 1182  sudo apt install sshpass
+ 1183  apt-get -f install
+ 1184  sudo apt install sshpass
+ 1185  ssh  root@13.233.17.169
+ 1186  ansible  hello  -m  command  -a   "date"   -k
+ 1187  ansible  hello  -m  command  -a   "cal" -k  
+ 1188  ansible-doc  -l
+ 1189  ansible-doc  -l  |  grep  command
+ 1190  A
+ 1191  ansible  hello  -m  command  -a   "yum  install  telnet -y" -k  
+ 1192  ansible  hello  -m  command  -a   " cal   |  wc -l" -k  
+ 1193  ansible  hello  -m  shell   -a   " cal   |  wc -l" -k  
+ 1194  history 
+ 1195  ansible-doc   command 
+ 1196  ansible-doc   shell
+ 1197  history 
+ 1198  ls
+ 1199  vim  /tmp/abc.txt
+ 1200  ansible  hello -m copy -a  "src=/tmp/abc.txt  dest=/root/remote.txt" -k
+ 1201  vim  /tmp/abc.txt
+ 1202  ansible  hello -m copy -a  "src=/tmp/abc.txt  dest=/root/remote.txt" -k
+ 1203  ansible  hello -m copy -a  "src=/tmp/abc.txt  dest=/root/remote.txt  owner=ec2-user"    -k
+ 1204  ansible  hello -m copy -a  "src=/tmp/abc.txt  dest=/root/remote.txt  owner=ec2-user         group=wheel"    -k
+ 1205  ansible  hello -m copy -a  "src=/tmp/abc.txt  dest=/root/remote.txt  owner=ec2-user         group=wheel mode=0700"    -k
+ 1206  history 
+ 1207  ansible-doc   copy 
+ 1208  history 
+ 1209  ansible  hello  -m yum  -a  "name=httpd  state=present"  -k
+ 1210  vim  /tmp/index.html
+ 1211  ansible  hello  -m yum  -a  "name=httpd  state=present"  -k
+ 1212  ansible  hello  -m copy  -a "src=/tmp/index.html  dest=/var/www/html/index.html" -k
+ 1213  ansible  hello  -m service -a  "name=httpd  state=started"  -k
+ 1214  history 
+ 1215  ansible  hello  -m ping  -k
+ 1216  vim hosts
+ 1217  ansible  hello  -m ping  -k
+ 1218  vim hosts
+ 1219  ls
+ 1220  mkdir epsilon
+ 1221  cd epsilon/
+ 1222  ls
+ 1223  pwd
+ 1224  vim  apache.yml
+ 1225  ansible-doc   yum
+ 1226  vim  apache.yml
+ 1227  ansible-playbook  --syntax-check   apache.yml
+ 1228  ansible-playbook   apache.yml
+ 1229  ansible-playbook   apache.yml  -k
+ 1230  ansible-playbook   apache.yml
+ 1231  vim  apache.yml
+ 1232  vim /tmp/hello.html
+ 1233  vim  apache.yml
+ 1234  ansible-playbook  --syntax-check   apache.yml
+ 1235  ansible-playbook    apache.yml
+ 1236  ansible-playbook    apache.yml**********************************************************************************
+ 1237  13.233.17.169              : ok=2    changed=1    unreachable=0    failed=0   
+ 1238  root@machine:/etc/ansible/epsilon# ansible-playbook   apache.yml
+ 1239  PLAY [hello] **************************************************************************************
+ 1240  ansible-playbook    apache.yml  -k
+ 1241  vim /tmp/hello.html
+ 1242  ansible-playbook    apache.yml  -k
+ 1243  vim apache.yml 
+ 1244  ansible-doc  service
+ 1245  ls
+ 1246  cp  apache.yml   anotherapache.yml
+ 1247  vim anotherapache.yml 
+ 1248  ansible-playbook  anotherapache.yml 
+ 1249  ansible-playbook  anotherapache.yml  -k
+ 1250  vim anotherapache.yml 
+ 1251  cp  apache.yml    sample.yml
+ 1252  vim sample.yml 
+ 1253  ansible-playbook  --syntax-check sample.yml 
+ 1254  vim sample.yml 
+ 1255  vim apache.yml 
+ 1256  ansible-playbook   --tags ok  apache.yml  -k
+ 1257  vim apache.yml 
+ 1258  ansible-playbook   --tags start  apache.yml  -k
+ 1259  ansible-playbook   --skip-tags  apache.yml  -k
+ 1260  ansible-playbook   --skip-tag  apache.yml  -k
+ 1261  ansible-playbook   --skip-tags=ok  apache.yml  -k
+ 1262  history 
+ 1263  cat /etc/issue
+ 1264  md5sum
+ 1265  ansible-playbook   --skip-tags=ok  apache.yml  -k
+ 1266  ansible-playbook   -v --skip-tags=ok  apache.yml  -k
+
