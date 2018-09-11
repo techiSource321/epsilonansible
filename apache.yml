@@ -1,0 +1,18 @@
+---
+ - hosts: hello
+   tasks:
+    - name:  installing  httpd  server 
+      yum: name=httpd state=present
+
+    - name: copying  the website to target machine 
+      copy: src=/tmp/hello.html  dest=/var/www/html/index.html mode=0644 
+
+    - name: starting  web service 
+      service: name=httpd  state=started  enabled=yes
+      tags:
+       - start
+
+    - name:  stopping  web service
+      service: name=httpd  state=stopped
+      tags:
+       - ok

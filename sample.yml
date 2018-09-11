@@ -1,0 +1,5 @@
+---
+	- 	hosts: hello
+		tasks:
+			- name: test command
+			  command:  date
