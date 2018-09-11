@@ -1,0 +1,10 @@
+---
+ - hosts: localhost 
+   tasks: 
+    - name: hello world
+      debug: msg="Hello world with ansible automation"
+
+    
+
+
+
